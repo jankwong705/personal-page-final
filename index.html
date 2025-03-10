@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Kwong's Portfolio</title>
+    <link rel="icon" href="icon/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        customElements.define('hello-world', class extends HTMLElement {
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+        });
+    </script>
+</head>
+<body>
+    <noscript>
+        <style>
+            .switch {
+                display: none;
+            }
+        </style>
+       <strong><em>JavaScript is disabled in your browser. Please enable it for the full functionality.</em></strong>
+    </noscript>
+    <header>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="exp.html">Experiences</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+            <label class="switch">
+                <input type="checkbox" id="light-switch" checked>
+                <span class="slider round"></span>
+            </label>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <hgroup id="home-header" class="page-header">
+            <h1>Home</h1>
+        </hgroup>
+        <section id="home">
+            <welcome-text>
+                <h2 style="font-size: 70px;">Hi, I'm Jan.</h2>
+                <p><strong>Welcome to my portfolio!</strong> 
+                    <hello-world></hello-world><br>
+                    <br>
+                    I'm a <b>4th-year undergraduate student</b> studying Computer Science at <abbr title="University of California">UC</abbr> San Diego. <br>
+                    Here you'll find information about my <em>projects, experiences, and ways to contact me.</em>
+                </p>
+            </welcome-text>
+            <figure>
+                <img src="img/headshot.png" alt="Jan's Profile Picture" id="jan-pic">
+            </figure>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <address>Contact me at: <a href="mailto:jykwong@ucsd.edu">jykwong@ucsd.edu</a></address>
+        <address>LinkedIn: <a href="https://www.linkedin.com/in/jankwong705/">https://www.linkedin.com/in/jankwong705/</a></address>
+    </footer>
+    <script src="theme.js" type="module"></script>
+</body>
+</html>

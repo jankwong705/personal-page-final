@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Kwong's Experiences </title>
+    <link rel="icon" href="icon/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <noscript>
+        <style>
+            .switch {
+                display: none;
+            }
+        </style>
+        <strong><em>JavaScript is disabled in your browser. Please enable it for the full functionality.</em></strong>
+    </noscript>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="exp.html">Experiences</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+            <label class="switch">
+                <input type="checkbox" id="light-switch" checked>
+                <span class="slider round"></span>
+            </label>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <hgroup id="project-header" class="page-header">
+            <h1>Projects</h1>
+        </hgroup>
+        <template id="proj-temp">
+            <job-exp>
+                <h3>Title</h3>
+                <i>Time</i> <br>
+                <details>
+                    <summary>Details</summary>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </details>
+            </job-exp>
+        </template>
+        <job-exp>
+            <h3>Analysis of Pixar Movie Success</h3>
+            <i>La Jolla, CA</i> <br>
+            <i>September 2024 - December 2024</i> <br>
+            <details id="proj-details">
+                <summary id="proj-details-sum">Details</summary>
+                <ul>
+                    <li>Collaborated with a team of 4 members to analyze the influence of character types on Pixar movies revenue</li>
+                    <li>Performed data cleaning and exploratory data analysis to gain insights into the data of 28 Pixar movies</li>
+                    <li>Concluded the absence of a correlation between character types and box office using permutation testing</li>
+                </ul>
+            </details>
+        </job-exp>
+        <job-exp>
+            <h3>Streak-Based Developer Journal </h3>
+            <i>La Jolla, CA</i> <br>
+            <i>April 2024 - June 2024</i> <br>
+            <details id="proj-details">
+                <summary id="proj-details-sum">Details</summary>
+                <ul>
+                    <li>Collaborated with a team of 11 members through Agile practices, participating in daily stand-ups, sprint planning,
+                        and conducting retrospectives to ensure smooth and efficient project progress</li>
+                    <li>Developed the tagging feature using JavaScript, allowing users to organize journal entries effectively</li>
+                    <li>Contributed to end-to-end Puppeteer testing, improving the reliability and robustness of the application</li>
+                </ul>
+            </details>
+        </job-exp>
+        <job-exp>
+            <h3>Evaluation of Speech Recognition AI</h3>
+            <i>La Jolla, CA</i> <br>
+            <i>January 2024 - December 2024</i> <br>
+            <details id="proj-details">
+                <summary id="proj-details-sum">Details</summary>
+                <ul>
+                    <li>Evaluated the performance of OpenAI’s Whisper against 75 human transcribers on a dataset of 300 English
+                        sentences spoken by 20 speakers with varying accents</li>
+                    <li>Discovered that sentence context differentially affected model and human performance</li>
+                    <li>Observed that humans outperformed models on isolated words, suggesting potential limitations in models’
+                        training data or acoustic context requirements</li>
+                    <li>Identified potential applications for using ASR to model human speech adaptability</li>
+                </ul>
+            </details>
+        </job-exp>
+        <br>
+    </main>
+    <hr>
+    <footer>
+        <address>Contact me at: <a href="mailto:jykwong@ucsd.edu">jykwong@ucsd.edu</a></address>
+        <address>LinkedIn: <a href="https://www.linkedin.com/in/jankwong705/">https://www.linkedin.com/in/jankwong705/</a></address>
+    </footer>
+    <script src="theme.js" type="module"></script>
+</body>
+</html>

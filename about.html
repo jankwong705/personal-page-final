@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Jan</title>
+    <link rel="icon" href="icon/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <noscript>
+        <style>
+            .switch {
+                display: none;
+            }
+        </style>
+        <strong><em>JavaScript is <del>enabled</del> <ins>disabled</ins> in your browser. Please enable it for the full functionality.</em></strong>
+    </noscript>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="exp.html">Experiences</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+            </ul>
+            <label class="switch">
+                <input type="checkbox" id="light-switch" checked>
+                <span class="slider round"></span>
+            </label>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <hgroup id="about-header" class="page-header">
+            <h1>About me</h1>
+        </hgroup>
+        <section id="bio">
+            <bio>
+                <h2>Bio:</h2>
+                <p>My name is Jan Kwong. I am a Computer Science student at UC San Diego, expecting to graduate in <ins>June 2025</ins>. I have a passion for software engineering and higher education research. I have been an Undergraduate Research Assistant at the UCSD LASR Lab, where I participated in a project on forced aligners and neural networks for phonetic recognition. I was also a computer science tutor at my school for the course of Theory of Computability.</p> 
+
+                <p>In my research assistant role, I read and analyzed papers on different ASR models, such as <dfn id="def-whisper">Whisper</dfn>, an ASR model by Open-AI, and implemented programs that calculate the word error rate of the recognized speech output. I used Git as a version control tool and collaborated with other researchers and supervisors.</p> 
+
+                <p>In my computer science tutor role, I held weekly office hours for students, explained course concepts patiently, and discussed concerns with the instructor. I also graded homework and exams from students, giving them insightful and useful feedback.</p> 
+
+                <p>I enjoy working with students and researchers who share my interest in learning and innovation. I value diversity, collaboration, and feedback, and I believe that I can bring unique perspectives and experiences to the team.</p>
+                
+            </bio>
+            <figure>
+                <img src="img/headshot.png" alt="Jan's Profile Picture" id="jan-pic">
+            </figure>
+        </section>
+
+        <section id="education">
+            <edu>
+                <h2 id="edu-head">Education:</h2>
+                <div style="font-size: larger;">UC San Diego</div>
+                <div>Expected Graduation Date: June 2025</div>
+                <div>Major: B.S. Computer Science</div>
+                <div>GPA: 3.8</div>
+            </edu>
+            <br>
+            <table border="1" id="courses">
+                <caption id="course-table-title"><b>Courses Taken</b></caption>
+                
+                <colgroup>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <tr>
+                    <th>Course</th>
+                    <th>Title</th>
+                </tr>
+
+                <tr>
+                    <td>CSE 100</td>
+                    <td>Advanced Data Structures</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 101</td>
+                    <td>Design and Analysis of Algorithms</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 120</td>
+                    <td>Operating Systems</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 110</td>
+                    <td>Software Engineering</td>
+                </tr>
+                
+                <tr>
+                    <td>COGS 108</td>
+                    <td>Data Science in Practice</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 141</td>
+                    <td>Computer Architecture</td>
+                </tr>
+                
+                <tr>
+                    <td>CSE 105</td>
+                    <td>Theory of Computation</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 152A</td>
+                    <td>Computer Vision</td>
+                </tr>
+
+                <tr>
+                    <td>CSE 107</td>
+                    <td>Modern Cryptography</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="resume">
+            <h2>My Resume:</h2>
+            <iframe src="resume/resume.pdf" width="600" height="400"></iframe>
+        </section>
+
+        <aside id="hobbies">
+            <h2>Hobbies:</h2>
+            <p>I really like <span class="hob">dancing and cooking</span> in my spare time!</p>
+
+            <pre>Some of my dancing videos:</pre> <br>
+            <video id="dance" width="600" height="400" controls>
+                <source src="vid/IMG_4595.mp4" type="video/mp4">
+                Unfortunately, the video might not be supported by your browser :(. 
+            </video> 
+            
+            <br><br>
+
+            <pre>Some of the food I've made:</pre> <br> 
+
+            <picture id="food-pic">
+                <div>
+                    <source srcset="img/steak.webp" type="image/webp" width="400">
+                    <img src="img/steak.webp" alt="Steak" width="400">
+                    <figcaption><i><pre>Steak with Mashed Potatoes and Roasted Brussel Sprouts</pre></i></figcaption>
+                </div>
+                <div>
+                    <source srcset="img/egg_sw.webp" type="image/webp">
+                    <img src="img/egg_sw.webp" alt="Egg sandwich" width="400">
+                    <figcaption><i><pre>Fluffy Egg Sandwich</pre></i></figcaption>
+                </div>
+                <div>
+                    <source srcset="img/alf.webp" type="image/webp">
+                    <img src="img/alf.webp" alt="Chicken alfredo" width="400">
+                    <figcaption><i><pre>Chicken Alfredo</pre></i></figcaption>
+                </div>
+            </picture>
+            
+        </aside>
+    </main>
+    <hr>
+    <footer>
+        <address>Contact me at: <a href="mailto:jykwong@ucsd.edu">jykwong@ucsd.edu</a></address>
+        <address>LinkedIn: <a href="https://www.linkedin.com/in/jankwong705/">https://www.linkedin.com/in/jankwong705/</a></address>
+    </footer>
+    <script src="theme.js" type="module"></script>
+</body>
+</html>
