@@ -32,6 +32,5 @@ const project3 = {
     link: "https://drive.google.com/file/d/1njbZ3BvwtOl5_99aGGe8xsL3X7Ab2Mzo/view"
 }
 
-localStorage.setItem("project1", JSON.stringify(project1));
-localStorage.setItem("project2", JSON.stringify(project2));
-localStorage.setItem("project3", JSON.stringify(project3));
+const projects = [project1, project2, project3];
+localStorage.setItem("projects", JSON.stringify(projects));

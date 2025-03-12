@@ -65,39 +65,33 @@ class ProjectCard extends HTMLElement {
 }
 
 customElements.define('project-card', ProjectCard);
-const loadLocal = document.getElementsByID("load-local");
-const loadRemote = document.getElementsByID("load-remote");
+const loadLocal = document.getElementById("load-local");
+const loadRemote = document.getElementById("load-remote");
+const container = document.getElementById("project-container");
+document.addEventListener("DOMContentLoaded", loadProjectsLocal);
 
-loadLocal.addEventListener("click", () => {
-    
-}); 
-
-try {
-    const projectData = await JSON.parse(localStorage.getItem("projects")) 
-    projectData.record.forEach(car => {
-        console.log(car);
-        // Example of expected result:
-        // {
-        // image_url:
-        // "working_url_here"
-        // make:
-        // "Suzuki"
-        // model:
-        // "Wagon R"
-        // year:
-        // 1998
-        //}
-
-
-        window.galleryItem = document.createElement("my-ride");
-        // TODO 5: Set attributes of my-ride as follows:
-        // <!-- <my-ride year="1998" make="Suzuki" model="Wagon R"
-        //     image-url="https://pub-940f423c24074b9ebe0052cc5f384faa.r2.dev/IMG_4746.jpg"></my-ride> -->
-        // using the properties in the "car" obj.
-        // setAttribute() will do the trick.
-        document.getElementById("gallery").appendChild(window.galleryItem);
-    });
-
-} catch (error) {
-    console.error("Can't load projects!");
+function loadProjectsLocal() {
+    loadLocal.addEventListener("click", () => {
+        try {
+            const projectData = JSON.parse(localStorage.getItem("projects")) ;
+            projectData.forEach(proj => {
+                const card = document.createElement("project-card");
+                card.setAttribute("title", proj.title);
+                card.setAttribute("location", proj.location);
+                card.setAttribute("time", proj.time);
+                card.setAttribute("img-src", proj.imgSrc);
+                card.setAttribute("alt-text", proj.altText);
+                card.setAttribute("item1", proj.item1);
+                card.setAttribute("item2", proj.item2);
+                card.setAttribute("item3", proj.item3);
+                card.setAttribute("link", proj.link);
+                container.appendChild(card);
+            });
+        
+        } catch (error) {
+            console.error(error.message);
+        }
+    }); 
 }
+
+

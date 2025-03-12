@@ -147,11 +147,11 @@ video:hover, img:hover, #msg-button:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.1);
 }
-job-exp:hover, project-card:hover {
+job-exp:hover, project-card:hover, .load-project-button:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.01);
 }
-video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover) project-card:not(:hover) {
+video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover), project-card:not(:hover), .load-project-button:not(:hover) {
     transition: transform 0.5s ease-in-out;
     transform: scale(1);
 }
@@ -342,6 +342,30 @@ job-exp:has(h3) {
     text-align: left;
     color: #333;
     font-size: 1.2em;
+}
+
+#proj-button-container {
+    display: flex;
+    align-items: flex-end; 
+    gap: 10px;
+}
+
+.load-project-button {
+    padding: 8px 20px;
+    margin: 10;
+    border: 2px solid;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+#load-local {
+    background-color: rgb(197, 237, 210);
+}
+
+#load-remote {
+    background-color: rgb(197, 226, 237);
 }
 
 /* Contact */
