@@ -43,11 +43,11 @@
         transition: none !important;
         transform: none !important;
     }
-    job-exp:hover {
+    job-exp:hover, project-card:hover {
         transition: none !important;
         transform: none !important;
     }
-    video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover) {
+    video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover), project-card:not(:hover){
         transition: none !important;
         transform: none !important;
     }
@@ -147,11 +147,11 @@ video:hover, img:hover, #msg-button:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.1);
 }
-job-exp:hover {
+job-exp:hover, project-card:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.01);
 }
-video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover) {
+video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover) project-card:not(:hover) {
     transition: transform 0.5s ease-in-out;
     transform: scale(1);
 }
@@ -198,7 +198,7 @@ body.dark-mode, header ul li.dark-mode{
     color: #ffffff;
 }
 
-job-exp.dark-mode {
+job-exp.dark-mode, project-card.dark-mode{
     background-color: #242b60;
     border: 2px solid #62787f;
     color: #ffffff;
