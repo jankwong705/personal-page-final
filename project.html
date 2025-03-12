@@ -35,6 +35,9 @@
     <main>
         <hgroup id="project-header" class="page-header">
             <h1>Projects</h1>
+            <button class="load-project-button" id="load-local">Load Local</button>
+            <br>
+            <button class="load-project-button" id="load-remote">Load Remote</button>
         </hgroup>
         <template id="proj-temp">
             <job-exp>
@@ -48,7 +51,11 @@
                 </details>
             </job-exp>
         </template>
+        <script type="module" src="./loadProjects.js"></script>
         <script type="module" src="./projectCard.js"></script>
+        <project-container>
+
+        </project-container>
         <project-card
             title="Analysis of Pixar Movie Success"
             location="La Jolla"
