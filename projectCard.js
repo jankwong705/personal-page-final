@@ -43,7 +43,7 @@ class ProjectCard extends HTMLElement {
             }`;
     }
 
-    getComponentHTML(title, employer, location, time, imgSrc, altText, item1, item2, item3, link) {
+    getComponentHTML() {
         return `
             <h2>${this.getAttribute('title') || ''}</h2>
             <i>${this.getAttribute('location') || ''}</i> <br>
