@@ -65,6 +65,8 @@ class ProjectCard extends HTMLElement {
 }
 
 customElements.define('project-card', ProjectCard);
+
+// Access buttons and container 
 const loadLocal = document.getElementById("load-local");
 const loadRemote = document.getElementById("load-remote");
 const container = document.getElementById("project-container");
@@ -73,7 +75,9 @@ document.addEventListener("DOMContentLoaded", loadProjectsLocal);
 function loadProjectsLocal() {
     loadLocal.addEventListener("click", () => {
         try {
-            const projectData = JSON.parse(localStorage.getItem("projects")) ;
+            // Get content from localStorage 
+            const projectData = JSON.parse(localStorage.getItem("projects"));
+            // Create card for each project
             projectData.forEach(proj => {
                 const card = document.createElement("project-card");
                 card.setAttribute("title", proj.title);
@@ -85,9 +89,9 @@ function loadProjectsLocal() {
                 card.setAttribute("item2", proj.item2);
                 card.setAttribute("item3", proj.item3);
                 card.setAttribute("link", proj.link);
+                // Add element to HTML
                 container.appendChild(card);
             });
-        
         } catch (error) {
             console.error(error.message);
         }
