@@ -91,6 +91,9 @@ function loadProjectsLocal() {
                 card.setAttribute("link", proj.link);
                 // Add element to HTML
                 container.appendChild(card);
+                if(localStorage.getItem("mode") == "dark") {
+                    card.classList.add("dark-mode");
+                }
             });
         } catch (error) {
             console.error(error.message);
