@@ -70,35 +70,47 @@ customElements.define('project-card', ProjectCard);
 const loadLocal = document.getElementById("load-local");
 const loadRemote = document.getElementById("load-remote");
 const container = document.getElementById("project-container");
-document.addEventListener("DOMContentLoaded", loadProjectsLocal);
 
-function loadProjectsLocal() {
-    loadLocal.addEventListener("click", () => {
-        try {
-            // Get content from localStorage 
-            const projectData = JSON.parse(localStorage.getItem("projects"));
-            // Create card for each project
-            projectData.forEach(proj => {
-                const card = document.createElement("project-card");
-                card.setAttribute("title", proj.title);
-                card.setAttribute("location", proj.location);
-                card.setAttribute("time", proj.time);
-                card.setAttribute("img-src", proj.imgSrc);
-                card.setAttribute("alt-text", proj.altText);
-                card.setAttribute("item1", proj.item1);
-                card.setAttribute("item2", proj.item2);
-                card.setAttribute("item3", proj.item3);
-                card.setAttribute("link", proj.link);
-                // Add element to HTML
-                container.appendChild(card);
-                if(localStorage.getItem("mode") == "dark") {
-                    card.classList.add("dark-mode");
-                }
-            });
-        } catch (error) {
-            console.error(error.message);
-        }
-    }); 
+function parseData(projectData) {
+    try {
+        // Create card for each project
+        projectData.forEach(proj => {
+            const card = document.createElement("project-card");
+            card.setAttribute("title", proj.title);
+            card.setAttribute("location", proj.location);
+            card.setAttribute("time", proj.time);
+            card.setAttribute("img-src", proj.imgSrc);
+            card.setAttribute("alt-text", proj.altText);
+            card.setAttribute("item1", proj.item1);
+            card.setAttribute("item2", proj.item2);
+            card.setAttribute("item3", proj.item3);
+            card.setAttribute("link", proj.link);
+            // Add element to HTML
+            container.appendChild(card);
+            if(localStorage.getItem("mode") == "dark") {
+                card.classList.add("dark-mode");
+            }
+        });
+    } catch (error) {
+        console.error(error.message);
+    }
 }
 
+loadLocal.addEventListener("click", () => {
+    // Get content from localStorage 
+    const projectData = JSON.parse(localStorage.getItem("projects"));
+    console.log(projectData);
+    parseData(projectData);
+}); 
+
+loadRemote.addEventListener("click", async () => {
+    // Get content from JSONBin
+    let response = await fetch("https://api.jsonbin.io/v3/b/67d3bd0d8960c979a57141b9", {
+        headers: {
+            "X-Master-Key": "$2a$10$EsrVXsDCDivZOfs9EXNzWutZpS8Igvx5B50xVDFiSmok016Kbc9M6"
+        }})
+    let projectData = await response.json();
+    projectData = Object.values(projectData.record);
+    parseData(projectData);
+});
 

@@ -30,7 +30,7 @@ const project3 = {
     item2: "Discovered that sentence context differentially affected model and human performance",
     item3: "Observed that humans outperformed models on isolated words, suggesting potential limitations in models’ training data or acoustic context requirements",
     link: "https://drive.google.com/file/d/1njbZ3BvwtOl5_99aGGe8xsL3X7Ab2Mzo/view"
-}
+};
 
 const projects = [project1, project2, project3];
 localStorage.setItem("projects", JSON.stringify(projects));
