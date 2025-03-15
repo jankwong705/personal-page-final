@@ -193,11 +193,13 @@ a {
 }
 
 body.dark-mode, header ul li.dark-mode{
+    transition: background-color 0.5s ease-in-out;
     background-color: #151728;
     color: #ffffff;
 }
 
 job-exp.dark-mode, project-card.dark-mode{
+    transition: background-color 0.5s ease-in-out;
     background-color: #242b60;
     border: 2px solid #62787f;
     color: #ffffff;
