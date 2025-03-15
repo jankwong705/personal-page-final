@@ -6,3 +6,5 @@
 - Used form submitting api (Formspree) to actualize contact form functions 
 - Stored courses in localStorage and used JavaScript to dynamically add each to course list for cleaner and less repetitive HTML markups 
 - Reorganized directory 
+  
+### Netlify link: https://jankwong-final.netlify.app
