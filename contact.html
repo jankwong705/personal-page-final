@@ -42,7 +42,7 @@
             <li>Leave a message <em><b>here:</b></em></li>
         </ol>
         <section id="contact">
-            <form action="https://httpbin.org/post" method="POST" id="send-msg">
+            <form action="https://formspree.io/f/mzzezzvv" method="POST" id="send-msg">
                 <fieldset>
                     <legend id="send-msg-part">Send me a message:</legend>
                     <br>
@@ -89,13 +89,22 @@
 
                     <br><br>
 
-                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                    <input type="hidden" id="possible-bot" name="possible-bot" value="false">
                     <input type="hidden" name="form-errors" id="form-errors">
 
                     <button type="submit" id="msg-button">Send</button>
                     <br>
                 </fieldset>
             </form>
+            <!-- Preventing bots from submitting forms -->
+            <script type="module">
+                document.getElementById("send-msg").addEventListener("submit", (event) => {
+                  if (document.getElementById("possible-bot").value !== "false") {
+                      event.preventDefault();
+                      console.log("Possible bot.");
+                  }
+                });
+            </script>
         </section>
         <br>
     </main>

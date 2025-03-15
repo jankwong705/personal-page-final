@@ -1,5 +1,5 @@
 :root {
-    --font-primary: "Georgia", sans-serif;
+    --font-primary: "Helevetica", sans-serif;
     --standard-gap: 1rem;
     --frame-color: #ffffff;
     --button-color: color-mix(in display-p3, white 90%, black 10%);
@@ -103,15 +103,14 @@
 header, footer {
     padding: var(--standard-gap);
     font-size: larger;
-    font-variant: small-caps;
 }
+
 address {
     font-weight: 300;
     text-align: center;
 }
 h1, h2 {
     font-weight: 500;
-    font-variant: small-caps;
     animation: fade 1.5s ease-in-out;
 }
 
@@ -205,7 +204,7 @@ job-exp.dark-mode, project-card.dark-mode{
 }
 
 a.dark-mode {
-    color: white;
+    color: white !important;
 }
 
 /* Hide default HTML checkbox */
@@ -327,9 +326,6 @@ figcaption pre{
 }
 
 /* Experiences */
-h3 {
-    font-variant: small-caps;
-}
 
 job-exp:has(h3) {
     animation: fade 1.5s ease-in-out;
