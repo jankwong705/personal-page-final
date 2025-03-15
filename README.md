@@ -1,3 +1,4 @@
+## Changes made:
 - Removed "Hobbies" section due to irrelevancy to professional development 
 - Deleted hello world script from landing page for performance boost 
 - Removed irrevelant videos and audios for faster rendering
