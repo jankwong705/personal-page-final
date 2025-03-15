@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Jan</title>
-    <link rel="icon" href="icon/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../icon/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
 <body>
     <noscript>
@@ -49,7 +49,7 @@
                 
             </bio>
             <figure>
-                <img src="img/headshot.png" alt="Jan's Profile Picture" id="jan-pic">
+                <img src="../img/headshot.png" alt="Jan's Profile Picture" id="jan-pic">
             </figure>
         </section>
 
@@ -62,6 +62,9 @@
                 <div>GPA: 3.8</div>
             </edu>
             <br>
+            <!-- Script for loading courses -->
+            <script src="../script/coursesJSON.js" type="module"></script>
+            <script src="../script/loadCourses.js" type="module"></script>
             <table border="1" id="courses">
                 <caption id="course-table-title"><b>Courses Taken</b></caption>
                 
@@ -74,57 +77,13 @@
                     <th>Course</th>
                     <th>Title</th>
                 </tr>
-
-                <tr>
-                    <td>CSE 100</td>
-                    <td>Advanced Data Structures</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 101</td>
-                    <td>Design and Analysis of Algorithms</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 120</td>
-                    <td>Operating Systems</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 110</td>
-                    <td>Software Engineering</td>
-                </tr>
-                
-                <tr>
-                    <td>COGS 108</td>
-                    <td>Data Science in Practice</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 141</td>
-                    <td>Computer Architecture</td>
-                </tr>
-                
-                <tr>
-                    <td>CSE 105</td>
-                    <td>Theory of Computation</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 152A</td>
-                    <td>Computer Vision</td>
-                </tr>
-
-                <tr>
-                    <td>CSE 107</td>
-                    <td>Modern Cryptography</td>
-                </tr>
+                <!-- Courses will be dynamically added here through JavaScript -->
             </table>
         </section>
 
         <section id="resume">
             <h2>Resume:</h2>
-            <iframe src="resume/resume.pdf" width="600" height="400"></iframe>
+            <iframe src="../resume/resume.pdf" width="600" height="400"></iframe>
         </section>
     </main>
     <hr>
@@ -132,6 +91,6 @@
         <address>Contact me at: <a href="mailto:jykwong@ucsd.edu">jykwong@ucsd.edu</a></address>
         <address>LinkedIn: <a href="https://www.linkedin.com/in/jankwong705/">https://www.linkedin.com/in/jankwong705/</a></address>
     </footer>
-    <script src="theme.js" type="module"></script>
+    <script src="../script/theme.js" type="module"></script>
 </body>
 </html>

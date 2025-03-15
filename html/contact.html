@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Jan Kwong </title>
-    <link rel="icon" href="icon/icon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="../icon/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../style/styles.css">
 </head>
-
 <body>
     <noscript>
+        <style>
+            .switch {
+                display: none;
+            }
+        </style>
         <strong><em>JavaScript is disabled in your browser. Please enable it for the full functionality.</em></strong>
     </noscript>
     <header>
@@ -21,6 +25,10 @@
                 <li><a href="project.html">Projects</a></li>
                 <li><a href="contact.html">Contact Me</a></li>
             </ul>
+            <label class="switch">
+                <input type="checkbox" id="light-switch" checked>
+                <span class="slider round"></span>
+            </label>
         </nav>
     </header>
     <hr>
@@ -34,12 +42,12 @@
             <li>Leave a message <em><b>here:</b></em></li>
         </ol>
         <section id="contact">
-            <form action="https://httpbin.org/post" method="POST" id="send-msg">
+            <form action="https://formspree.io/f/mzzezzvv" method="POST" id="send-msg">
                 <fieldset>
                     <legend id="send-msg-part">Send me a message:</legend>
                     <br>
                     <label for="name" class="contact-label">Your Name:</label>
-                    <input type="text" id="name" name="name" class="contact-field" pattern="[a-zA-Z0-9 .,!?']*" maxlength="200" required>
+                    <input type="text" id="name" name="name" class="contact-field" pattern="[a-zA-Z0-9 ]*" maxlength="200" required>
                     <br>
                     <output class="error-message" id="name-pattern-mismatch"></output>
                     
@@ -62,7 +70,10 @@
                     <label for="message" class="contact-label">Your Message:</label> <br>
                     <textarea id="message" name="message" rows="4" cols="50" class="contact-field" minlength="3" maxlength="3000" pattern="[a-zA-Z0-9 .,!?']*" required></textarea> 
                     <br>
-                    <output class="error-message" id="message-empty-error"></output>
+                    <output class="info" id="char-count">0</output> 
+                    <output class="info" id="total-char">/ 3000</output> 
+                    <output class="error-message" id="full-char"></output>
+                    <output class="error-message" id="message-error"></output>
 
                     <br><br>
 
@@ -74,16 +85,26 @@
                         <option value="no-need">No need to contact me</option>
                         </optgroup>
                     </select>
-                    <output class="info-reply" id="reply-soon">(Replies can be expected within 48 hours.)</output>
+                    <output class="info" id="reply-soon">(Replies can be expected within 48 hours.)</output>
 
                     <br><br>
 
-                    <input type="hidden" id="possible_bot" name="possible_bot" value="true">
+                    <input type="hidden" id="possible-bot" name="possible-bot" value="false">
+                    <input type="hidden" name="form-errors" id="form-errors">
 
                     <button type="submit" id="msg-button">Send</button>
                     <br>
                 </fieldset>
             </form>
+            <!-- Preventing bots from submitting forms -->
+            <script type="module">
+                document.getElementById("send-msg").addEventListener("submit", (event) => {
+                  if (document.getElementById("possible-bot").value !== "false") {
+                      event.preventDefault();
+                      console.log("Possible bot.");
+                  }
+                });
+            </script>
         </section>
         <br>
     </main>
@@ -92,5 +113,7 @@
         <address>Contact me at: <a href="mailto:jykwong@ucsd.edu">jykwong@ucsd.edu</a></address>
         <address>LinkedIn: <a href="https://www.linkedin.com/in/jankwong705/">https://www.linkedin.com/in/jankwong705/</a></address>
     </footer>
+    <script src="../script/formValid.js" type="module"></script>
+    <script src="../script/theme.js" type="module"></script>
 </body>
 </html>
