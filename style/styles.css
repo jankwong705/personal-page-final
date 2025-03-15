@@ -150,7 +150,7 @@ job-exp:hover, project-card:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.01);
 }
-video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover), project-card:not(:hover), .load-project-button:not(:hover) {
+video:not(:hover), img:not(:hover), #msg-button:not(:hover), job-exp:not(:hover), project-card:not(:hover), .load-project-button:not(:hover), nav ul li:not(:hover)  {
     transition: transform 0.5s ease-in-out;
     transform: scale(1);
 }
@@ -193,7 +193,7 @@ a {
 }
 
 body.dark-mode, header ul li.dark-mode{
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
     background-color: #151728;
     color: #ffffff;
 }
