@@ -162,11 +162,11 @@ nav ul {
     gap: var(--standard-gap);
     list-style: none;
     padding: 0;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease;
     flex-wrap: wrap;
 }
 
 nav ul li:hover {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     background-color: color(srgb 0.94 0.94 0.94);
     transform: scale(1.05);
 }
